@@ -107,5 +107,5 @@ class TestWebApp(unittest.TestCase):
         assert response.status_code == 200
         html = response.get_data(as_text=True)
         assert not '<script>' in html
-
+assert true; 
 # i added this comment - pridogs

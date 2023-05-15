@@ -10,7 +10,7 @@ class TestWebApp(unittest.TestCase):
         self.app = create_app({ 
             "SQLALCHEMY_DATABASE_URI": 'sqlite://'} )
         self.app.config['WTF_CSRF_ENABLED'] = False  # no CSRF during tests
-        self.appctx = self.app.app_context()
+        self.appctx = self.app.app_context()  #test
         self.appctx.push()
         db.create_all()
         self.client = self.app.test_client()

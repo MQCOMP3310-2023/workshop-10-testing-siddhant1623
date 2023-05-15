@@ -7,10 +7,15 @@ from werkzeug.security import check_password_hash
 
 class TestWebApp(unittest.TestCase):
     def setUp(self):
+<<<<<<< HEAD
         self.app = create_app({
             "SQLALCHEMY_DATABASE_URI": 'sqlite://'})
+=======
+        self.app = create_app({ 
+            "SQLALCHEMY_DATABASE_URI": 'sqlite://'} )
+>>>>>>> 87067cc263a620dd1cf39478b18d578fec3c6f6c
         self.app.config['WTF_CSRF_ENABLED'] = False  # no CSRF during tests
-        self.appctx = self.app.app_context()
+        self.appctx = self.app.app_context()  #test
         self.appctx.push()
         db.create_all()
         self.client = self.app.test_client()

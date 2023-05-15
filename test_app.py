@@ -1,25 +1,27 @@
-<<<<<<< HEAD
-# Siddhant test 2
-=======
->>>>>>> c59790389528bc04424a80c02ede44aec68b5afc
-import unittest
-from flask import current_app
-from project import create_app, db
-from project.models import User
 from werkzeug.security import check_password_hash
- 
+from project.models import User
+from project import create_app, db
+from flask import current_app
+import unittest
+<< << << < HEAD
+# Siddhant test 2
+== == == =
+>>>>>> > c59790389528bc04424a80c02ede44aec68b5afc
+
 
 class TestWebApp(unittest.TestCase):
     def setUp(self):
-<<<<<<< HEAD
+
+
+<< << << < HEAD
         self.app = create_app({
             "SQLALCHEMY_DATABASE_URI": 'sqlite://'})
-=======
-        self.app = create_app({ 
-            "SQLALCHEMY_DATABASE_URI": 'sqlite://'} )
->>>>>>> 87067cc263a620dd1cf39478b18d578fec3c6f6c
+== == == =
+        self.app = create_app({
+            "SQLALCHEMY_DATABASE_URI": 'sqlite://'})
+>>>>>> > 87067cc263a620dd1cf39478b18d578fec3c6f6c
         self.app.config['WTF_CSRF_ENABLED'] = False  # no CSRF during tests
-        self.appctx = self.app.app_context()  #test 2
+        self.appctx = self.app.app_context()  # test 2
         self.appctx.push()
         db.create_all()
         self.client = self.app.test_client()
@@ -107,5 +109,6 @@ class TestWebApp(unittest.TestCase):
         assert response.status_code == 200
         html = response.get_data(as_text=True)
         assert not '<script>' in html
-assert true; 
+
 # i added this comment - pridogs
+# i added this comment - pridogs to dev

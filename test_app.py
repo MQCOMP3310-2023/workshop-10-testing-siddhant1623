@@ -1,10 +1,9 @@
-# Siddhant
 import unittest
 from flask import current_app
 from project import create_app, db
 from project.models import User
 from werkzeug.security import check_password_hash
-
+ 
 
 class TestWebApp(unittest.TestCase):
     def setUp(self):
